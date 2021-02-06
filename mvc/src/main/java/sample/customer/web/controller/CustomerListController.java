@@ -21,7 +21,8 @@ public class CustomerListController {
     @Autowired
     private CustomerService customerService;
 
-    @RequestMapping(value = "/", method = GET)
+    // @RequestMapping(value = "/", method = GET)
+    @GetMapping("/")
     public String home() {
         return "forward:/customer";
     }
