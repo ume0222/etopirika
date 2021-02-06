@@ -26,7 +26,8 @@ public class CustomerListController {
         return "forward:/customer";
     }
 
-    @RequestMapping(value = "/customer", method = GET)
+    // @RequestMapping(value = "/customer", method = GET)
+    @GetMapping("/customer")
     public String showAllCustomers(Model model) {
         List<Customer> customers = customerService.findAll();
         model.addAttribute("customers", customers);
