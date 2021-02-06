@@ -21,12 +21,14 @@ public class CustomerListController {
     @Autowired
     private CustomerService customerService;
 
-    @RequestMapping(value = "/", method = GET)
+    // @RequestMapping(value = "/", method = GET)
+    @GetMapping("/")
     public String home() {
         return "forward:/customer";
     }
 
-    @RequestMapping(value = "/customer", method = GET)
+    // @RequestMapping(value = "/customer", method = GET)
+    @GetMapping("/customer")
     public String showAllCustomers(Model model) {
         List<Customer> customers = customerService.findAll();
         model.addAttribute("customers", customers);
